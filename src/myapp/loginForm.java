@@ -53,6 +53,7 @@ Border empty = BorderFactory.createEmptyBorder();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
+        click = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -128,6 +129,23 @@ Border empty = BorderFactory.createEmptyBorder();
         password.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bahnschrift", 1, 14))); // NOI18N
         jPanel2.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 220, 50));
 
+        click.setBackground(new java.awt.Color(255, 255, 255));
+        click.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
+        click.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        click.setText("New User? Click here to register.");
+        click.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clickMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                clickMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                clickMouseExited(evt);
+            }
+        });
+        jPanel2.add(click, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 310, 30));
+
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalPages/3472c2d8c89380356312f1137e99f537 (1).jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 320, 410));
@@ -185,6 +203,20 @@ int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
        
     }//GEN-LAST:event_closeMouseClicked
 
+    private void clickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseClicked
+        this.dispose();
+        register sp = new register();
+        sp.setVisible(true);
+    }//GEN-LAST:event_clickMouseClicked
+
+    private void clickMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseEntered
+        
+    }//GEN-LAST:event_clickMouseEntered
+
+    private void clickMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseExited
+        
+    }//GEN-LAST:event_clickMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -221,6 +253,7 @@ int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel click;
     private javax.swing.JLabel close;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

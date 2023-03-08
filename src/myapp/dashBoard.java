@@ -48,7 +48,6 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         username11 = new javax.swing.JLabel();
-        username12 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         head = new javax.swing.JPanel();
         minimize = new javax.swing.JLabel();
@@ -140,11 +139,6 @@ public class dashBoard extends javax.swing.JFrame {
         username11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         username11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         navbar.add(username11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 200, 20));
-
-        username12.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
-        username12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        username12.setText("Admin");
-        navbar.add(username12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 200, 10));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/myapp/70e2f9d4191154624f58c15eb684e27a.jpg"))); // NOI18N
         navbar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -120, 200, 600));
@@ -301,6 +295,5 @@ settings.setBackground(navcolor);           // TODO add your handling code here:
     private javax.swing.JPanel navbar;
     private javax.swing.JPanel settings;
     public static javax.swing.JLabel username11;
-    public static javax.swing.JLabel username12;
     // End of variables declaration//GEN-END:variables
 }
