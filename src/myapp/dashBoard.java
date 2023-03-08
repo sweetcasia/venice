@@ -42,12 +42,13 @@ public class dashBoard extends javax.swing.JFrame {
         navbar = new javax.swing.JPanel();
         dashpane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        search = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         settings = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         inventory1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        username11 = new javax.swing.JLabel();
+        username12 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         head = new javax.swing.JPanel();
         minimize = new javax.swing.JLabel();
@@ -86,29 +87,7 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1.setText("DASHBOARD");
         dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 40));
 
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 200, 40));
-
-        search.setBackground(new java.awt.Color(204, 204, 255));
-        search.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 255), new java.awt.Color(255, 204, 255)));
-        search.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                searchMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                searchMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                searchMouseExited(evt);
-            }
-        });
-        search.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("SEARCH PRODUCT");
-        search.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 40));
-
-        navbar.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 200, 40));
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 200, 40));
 
         settings.setBackground(new java.awt.Color(204, 204, 255));
         settings.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -130,7 +109,7 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 255), new java.awt.Color(255, 204, 255)));
         settings.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 40));
 
-        navbar.add(settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 200, 40));
+        navbar.add(settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 200, 40));
 
         inventory1.setBackground(new java.awt.Color(204, 204, 255));
         inventory1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 255), new java.awt.Color(255, 204, 255)));
@@ -152,7 +131,20 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel6.setText("INVENTORY");
         inventory1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 40));
 
-        navbar.add(inventory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 200, 40));
+        navbar.add(inventory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 200, 40));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/myapp/icons8-manager-100 (1).png"))); // NOI18N
+        navbar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -3, 140, -1));
+
+        username11.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
+        username11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        username11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        navbar.add(username11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 200, 20));
+
+        username12.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
+        username12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        username12.setText("Admin");
+        navbar.add(username12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 200, 10));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/myapp/70e2f9d4191154624f58c15eb684e27a.jpg"))); // NOI18N
         navbar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -120, 200, 600));
@@ -216,14 +208,6 @@ public class dashBoard extends javax.swing.JFrame {
        dashpane.setBackground(navcolor);  
     }//GEN-LAST:event_dashpaneMouseExited
 
-    private void searchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseEntered
-       search.setBackground(bodycolor);   
-    }//GEN-LAST:event_searchMouseEntered
-
-    private void searchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseExited
-      search.setBackground(navcolor);   
-    }//GEN-LAST:event_searchMouseExited
-
     private void settingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsMouseClicked
        settingsPage sp = new settingsPage();
        maindesktop.add(sp).setVisible(true);
@@ -237,12 +221,6 @@ settings.setBackground(bodycolor);           // TODO add your handling code here
 settings.setBackground(navcolor);           // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_settingsMouseExited
-
-    private void searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseClicked
-    Search a= new Search();
-        a.setVisible(true);
-        a.setDefaultCloseOperation(Search.DISPOSE_ON_CLOSE);   
-    }//GEN-LAST:event_searchMouseClicked
 
     private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
        dashBoardPage dbp = new dashBoardPage();
@@ -260,7 +238,7 @@ settings.setBackground(navcolor);           // TODO add your handling code here:
     private void inventory1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inventory1MouseClicked
         Display_Purchase a= new Display_Purchase();
         a.setVisible(true);
-        a.setDefaultCloseOperation(Display_Purchase.DISPOSE_ON_CLOSE); 
+       dispose();
     }//GEN-LAST:event_inventory1MouseClicked
 
     private void inventory1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inventory1MouseEntered
@@ -312,16 +290,17 @@ settings.setBackground(navcolor);           // TODO add your handling code here:
     private javax.swing.JPanel head;
     private javax.swing.JPanel inventory1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JLabel minimize;
     private javax.swing.JPanel navbar;
-    private javax.swing.JPanel search;
     private javax.swing.JPanel settings;
+    public static javax.swing.JLabel username11;
+    public static javax.swing.JLabel username12;
     // End of variables declaration//GEN-END:variables
 }

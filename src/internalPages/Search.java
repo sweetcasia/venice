@@ -11,6 +11,7 @@ package internalPages;
  */
 import java.io.*;
 import javax.swing.*;
+import myapp.dashBoard;
 public class Search extends javax.swing.JFrame {
 
     /**
@@ -37,6 +38,7 @@ public class Search extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,8 +50,8 @@ public class Search extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(102, 153, 255));
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        jLabel1.setText("ITEM:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 40, 30));
+        jLabel1.setText("PRODUCT NAME:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 120, 30));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
@@ -168,7 +170,7 @@ public class Search extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Index No.", "Item", "Qty.", "Unit Price"
+                "Product ID", "Product Name", "Stocks", "Price"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -182,7 +184,7 @@ public class Search extends javax.swing.JFrame {
         jTable1.setEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 153, 750, 300));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 153, 760, 280));
 
         jTextField1.setBackground(new java.awt.Color(153, 153, 255));
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(204, 102, 255)));
@@ -197,6 +199,16 @@ public class Search extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("CASIA STORE INVENTORY SYSTEM");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 70));
+
+        jButton19.setBackground(new java.awt.Color(255, 102, 102));
+        jButton19.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        jButton19.setText("BACK");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 100, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalPages/3472c2d8c89380356312f1137e99f537 (1).jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 480));
@@ -263,6 +275,13 @@ public class Search extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        Display_Purchase db = new Display_Purchase();
+        db.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_jButton19ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -306,6 +325,7 @@ public class Search extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton19;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

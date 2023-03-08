@@ -69,11 +69,11 @@ public class dashBoardPage extends javax.swing.JInternalFrame {
             .addGap(0, 130, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 140, 130));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 140, 130));
 
         jLabel1.setFont(new java.awt.Font("Century", 1, 24)); // NOI18N
         jLabel1.setText("CASIA  STORE INVENTORY SYSTEM ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -1, 490, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, -1, 490, 50));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalPages/image (4).jpg"))); // NOI18N
         jLabel10.setText("jLabel10");

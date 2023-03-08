@@ -47,13 +47,12 @@ Border empty = BorderFactory.createEmptyBorder();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        username = new javax.swing.JTextField();
         close = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        password = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,23 +81,14 @@ Border empty = BorderFactory.createEmptyBorder();
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans Typewriter", 1, 12))); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        username.setBackground(new java.awt.Color(204, 204, 255));
+        username.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bahnschrift", 1, 14))); // NOI18N
+        username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                usernameActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 220, 40));
-
-        jTextField2.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Sans Typewriter", 1, 12))); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 220, 40));
+        jPanel2.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 220, 50));
 
         close.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -134,10 +124,9 @@ Border empty = BorderFactory.createEmptyBorder();
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(204, 204, 255)));
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 90, 30));
 
-        jLabel3.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("WELCOME!");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 290, 20));
+        password.setBackground(new java.awt.Color(204, 204, 255));
+        password.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bahnschrift", 1, 14))); // NOI18N
+        jPanel2.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 220, 50));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalPages/3472c2d8c89380356312f1137e99f537 (1).jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
@@ -149,16 +138,35 @@ Border empty = BorderFactory.createEmptyBorder();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-dashBoard dash = new dashBoard(); 
+        String users = username.getText();
+        String pass = password.getText();
+        password.setEchoChar((char)0);
+        
+        if (users.isEmpty() || users.equals("") || pass.isEmpty() ||pass.equals("")){
+        
+        username.setText("");
+        password.setText("");
+    }
+        else{
+           dashBoard dash = new dashBoard();
+           dash.setVisible(true);
+           dashBoard.username11.setText(""+users);
+           this.setVisible(true);
+           this.setDefaultCloseOperation(this.HIDE_ON_CLOSE);
+           this.dispose();
+            
+            
+        }
+
+
+        
+        dashBoard dash = new dashBoard(); 
+
 this.dispose();
 dash.setVisible(true);
 // TODO add your handling code here:
@@ -218,13 +226,12 @@ int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel minimize;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }

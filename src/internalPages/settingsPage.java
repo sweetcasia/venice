@@ -41,10 +41,10 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         manageuser = new javax.swing.JPanel();
@@ -73,10 +73,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 140, 130));
 
-        jLabel1.setFont(new java.awt.Font("Century", 1, 24)); // NOI18N
-        jLabel1.setText("ACCOUNT SETTINGS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
-
         jLabel9.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
         jLabel9.setText("EMAIL:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
@@ -88,6 +84,10 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jLabel11.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
         jLabel11.setText("POSITION:");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Century", 1, 24)); // NOI18N
+        jLabel1.setText("ACCOUNT SETTINGS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, -1, 490, 50));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalPages/image (4).jpg"))); // NOI18N
         jLabel12.setText("jLabel10");
@@ -202,7 +202,7 @@ JFrame mainFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
 mainFrame.dispose();
 loginForm lf = new loginForm(); 
 lf.setVisible(true);
-// TODO add your handling code here:
+dispose();// TODO add your handling code here:
     }//GEN-LAST:event_logoutMouseClicked
 
 
